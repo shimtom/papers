@@ -60,6 +60,9 @@
   - Discriminator
     Generatorは固定したまま、$\tilde{h}_k$と$h_k$を分類できるように学習
 
+  $$
+  \min_G \max_D \mathbb{E}_{h\sim p_{Data}(h,l)}[\log{D(h,l)}]+ \mathbb{E}_{z\sim p_{Noise}(z),l\sim p_l(l)}[\log(1 - D(G(z, l), l))]
+  $$
 * Note: それぞれのGANを独立に学習することに注意
 
 ![figure2](./figure/figure2.png)
